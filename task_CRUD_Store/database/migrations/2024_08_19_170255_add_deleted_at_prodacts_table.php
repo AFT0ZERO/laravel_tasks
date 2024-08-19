@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('movies', function (Blueprint $table) {
+        Schema::table('prodacts', function (Blueprint $table) {
             $table->softDeletes();
+           
         });
     }
 
-  
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        //
+    }
 };

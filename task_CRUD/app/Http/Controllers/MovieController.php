@@ -31,6 +31,7 @@ class MovieController extends Controller
                 'gener'=>['required','min:4']
             ]
             );
+            
         $name=request()->name;
         $description=request()->description;
         $gener=request()->gener;
@@ -87,5 +88,6 @@ class MovieController extends Controller
     {
         $movie->delete();
         return to_route('movies.index');
+        // return redirect()->route('movies.index');
     }
 }

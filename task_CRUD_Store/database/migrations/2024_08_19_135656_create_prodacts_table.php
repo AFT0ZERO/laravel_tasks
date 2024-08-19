@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('movies', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('prodacts', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
-  
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('prodacts');
+    }
 };

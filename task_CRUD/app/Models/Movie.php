@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    use HasFactory ,SoftDeletes ;
+    use HasFactory 
+    ,SoftDeletes 
+    ;
 
     protected $fillable=[
         'movie_name',
